@@ -1,0 +1,35 @@
+:root {
+  --main-black: #141414;
+  --main-white: #FFFFFC;
+  --main-gray: #CCC7B7;
+  --main-orange: #FF7F11;
+  --main-red: #FF3F00;
+}
+
+body {
+  background-color: var(--main-black);
+  color: var(--main-white);
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+}
+
+#app {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-weight: 300;
+  text-align: center;
+  font-size: 20rem;
+  margin-bottom: 0;
+}
+
+.border {
+  background-color: rgba(255, 255, 252, 1);
+  min-width: 80%;
+  filter: drop-shadow(0px 0px 3px var(--main-white));
+  border-radius: 10px;
+}
