@@ -17,7 +17,11 @@ const punch = (string, letters) => {
   document.getElementById('prompt').textContent = string
 
   if(letters.length > 0) {
-    let ttl = clamp(Math.random() * 350, 200, 350)
+    let wait = Math.random() * 300
+    if(letter.match(/'w/))
+      wait += 100
+
+    const ttl = clamp(wait * 350, 150, 300)
     setTimeout(punch, ttl, string, letters);
   }
 }
