@@ -18,10 +18,11 @@ const punch = (string, letters) => {
 
   if(letters.length > 0) {
     let wait = Math.random() * 300
-    if(letter.match(/'w/))
-      wait += 100
+    if(!letter.match(/[\w\s]/))
+      wait += 300
 
-    const ttl = clamp(wait * 350, 150, 300)
+    const ttl = clamp(wait, 150, 400)
+    console.log(ttl)
     setTimeout(punch, ttl, string, letters);
   }
 }
