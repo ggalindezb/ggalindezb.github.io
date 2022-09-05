@@ -7,13 +7,12 @@ const clamp = (value, min, max) => {
 }
 
 const type = (target) => {
-  console.log(`Typing: ${target}`)
   punch('', target.split(''))
 }
 
 const punch = (string, letters) => {
-  let letter = letters.shift();
-  string = `${string}${letter}`;
+  let letter = letters.shift()
+  string = `${string}${letter}`
   document.getElementById('prompt').textContent = string
 
   if(letters.length > 0) {
@@ -22,7 +21,8 @@ const punch = (string, letters) => {
       wait += 300
 
     const ttl = clamp(wait, 150, 400)
-    console.log(ttl)
-    setTimeout(punch, ttl, string, letters);
+    setTimeout(punch, ttl, string, letters)
+  } else {
+    document.getElementById('user-input').style.display = 'block'
   }
 }

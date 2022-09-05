@@ -19,15 +19,32 @@ body {
   display: grid;
   place-items: center;
 }
+
 p span#caret, span#prompt {
   font-weight: 300;
   text-align: center;
-  font-size: 10rem;
+  font-size: 7rem;
   margin-bottom: 0;
 }
 
 #prompt {
   animation: 3s;
+}
+
+p#user-input {
+  display: none;
+}
+
+#repl {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 7rem;
+  font-weight: 300;
+}
+
+#repl:focus {
+  outline: none;
 }
 
 .border {
